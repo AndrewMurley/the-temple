@@ -1,4 +1,5 @@
 from sys import exit
+from start import start
 
 class Scene(object):
     def enter(self):
@@ -27,14 +28,8 @@ class Start(Scene):
         print "Do you want to go on an adventure?"
         choice = raw_input("> ")
 
-        if choice == "No":
-            print "Ok. Go home then."
-            return "finished"
-        elif choice == "Yes":
-            return "opening"
-        else:
-            print "This is a Yes or No question."
-            return "start"
+        output = start(choice)
+        return "%s" % (output)
 
 class Opening(Scene):
     def enter(self, choices):
@@ -68,7 +63,7 @@ class Entrance(Scene):
 
 class Hole_in_the_Ground(Scene):
     def enter(self, choices):
-        print "Do you want to lower yourself in or jump down?"
+        print "Do you want to lower yourself down or jump down?"
         choice = raw_input("> ")
         
         if choice == "Lower myself down":
@@ -98,7 +93,6 @@ class Caves(Scene):
             print "Error. Type 'Torch' or 'Flashlight'."
             return "caves"
         
-        print ""
         print "Go in the right cave or the left cave?"
         choice2 = raw_input("> ")
         
@@ -170,6 +164,7 @@ class Hallway(Scene):
             print "You roll your rope across the floor. It reveals that there is"
             print "a hidden spike trap in the floor. You avoid the trap."
             choices[1] = 0
+            return "amulet_room"
         
         elif choice == "Throw a rock to test for traps":
             print "The rock reveals no traps. You walk in and activate a hidden"
