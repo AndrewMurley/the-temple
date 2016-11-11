@@ -1,0 +1,29 @@
+<center>
+    <h1>____________</h1>
+    <h3>{{ prompt }}</h3>
+    
+    <!label><!input type="text"> <!/label><!br>
+    
+    {% for text, url in inputs %}
+        <form action="{{ url }}" method = "get">
+            {% csrf_token %}
+            <input type="submit" value={{ text }}>
+        </form>
+    {% endfor %}
+    <!input type="submit" value="Submit">
+    
+    <h1>____________</h1>
+    
+</center>
+<!div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
+  <!img src="http://wallpapersonthe.net/wallpapers/m/a-mountain_fantasy_ancient_temples_in_the_mountain_valley_valley_temple-24903.jpg" style='width:100%;height:100%' alt='[]' />
+<!/div>
+
+<style>
+    body {
+        background-image: url("http://wallpapersonthe.net/wallpapers/l/mountain_fantasy_ancient_temples_in_the_mountain_valley_valley_temple-24903.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+</style>
+<!img src = "http://wallpapersonthe.net/wallpapers/m/a-mountain_fantasy_ancient_temples_in_the_mountain_valley_valley_temple-24903.jpg" style = "height:900px; width:1800px;" />

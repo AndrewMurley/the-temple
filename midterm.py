@@ -1,6 +1,6 @@
 from sys import exit
 from start import start
-
+                                    #Include Save function
 class Scene(object):
     def enter(self):
         print "This scene is not yet configured. Subclass it and implement enter()."
@@ -107,7 +107,7 @@ class Caves(Scene):
                 return "finished"
         
         elif choice2 == "Right cave":
-            if choice1 == 1:
+            if choice1 == 0:
                 print "As you enter, dozens of snakes slither up from the floor."
                 print "You try to ward them off with your flashlight, but it"
                 print "fails. The snakes bite you until the poison numbs your"
