@@ -246,14 +246,11 @@ class No_Amulet_Endng(Scene):
 
 class Amulet_Ending(Scene):
     def enter(self, choices):
-        print "After you exit the temple, you discover that the amulet will not"
-        print "come off of your hand, no matter how hard you shake. You remember"
-        print "the inscription you noticed earlier and decide to read it. The"
-        print "inscription says 'So you took the amulet even after I warned you."
-        print "Well, if you ever want this amulet off of your hand, you will have"
-        print "to go to another temple. What fun for you' You notice a rough"
-        print "sketch of a temple on the amulet. You hurry back to town to try and"
-        print "find the temple that matches the drawing."
+        print "After you exit the temple, you notice an inscription on the amulet."
+        print "It reads, 'Congratulations! You have managed to survive the first"
+        print "temple. You could stop now and return home, or you could follow these"
+        print "instructions to find a more dangerous, more rewarding temple. The"
+        print "choice is yours.'"
         return "finished"
 
 class Open_Corridor(Scene):
@@ -330,7 +327,7 @@ class Top_Of_The_Temple(Scene):
         
         elif choice == "Spooky tunnel":
             print "You grudgingly go down the spooky tunnel. You are startled by everything."
-            print "Even a little mouse. A mouse Somehow, you make it to the next room."
+            print "Even a little mouse. A mouse! Somehow, you make it to the next room."
             return "treasure_room"
         
         else:
